@@ -1,0 +1,22 @@
+def is_prime(number):
+    if number == 2:
+        return True
+    if number%2 == 0:
+        return False
+    else:
+        for j in range(3, int(number**0.5)+1):
+            if number%j == 0:
+                return False
+
+i = 0
+number = 1
+
+while True:
+    number += 1
+    if is_prime(number) != False:
+        i += 1
+    if i == 10001:
+        break
+print(number)
+    
+   
